@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> <CENTER> 
+   <h1> FLAMES CALCULATOR </h1> <br> 
+    <h4>JUST FOR FUN! </h4> <br>
+   </CENTER> <Hr>
+</head>
+<body>
+    <center>
+        <h2>Enter the names of two people to find out their relationship status according to the FLAMES game:</h2>
+        <form> <select name="name1" id="name1">
+                <option value="">Select first name</option>
+                <option value="Alice">AKASH</option>
+                
+            </select>
+            <select name="name2" id="name2">
+                <option value="">Select second name</option>
+                <option value="Bob">KOBISHRINI</option>
+                
+            </select> 
+        <button type="button" onclick="calculateFlames()">Calculate</button>
+        </form>
+        <p id="result"></p>
+
+        <script> 
+            function calculateFlames() {
+                var name1 = document.getElementById("name1").value.toLowerCase().replace(/\s/g, '');
+                var name2 = document.getElementById("name2").value.toLowerCase().replace(/\s/g, '');
+
+                var count = 0;
+                for (var i = 0; i < name1.length; i++) {
+                    if (name2.includes(name1[i])) {
+                        count++;
+                        name2 = name2.replace(name1[i], '');
+                    }
+                }
+
+                var flames = ["Friends", "Love", "Affection", "Marriage", "Enemy", "Siblings"];
+                var resultIndex = count % 6;
+                document.getElementById("result").innerText = "The relationship status is: " + flames[resultIndex];
+            }
+        </script> 
+        <hr>  
+    </center>
+    <center><h3> Please use the calculator above! </h3>
+    <h3>I hope you like it the result!</h3></center>
+
+</body>
+</html>
