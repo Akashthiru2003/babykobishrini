@@ -6,7 +6,48 @@
    </CENTER> <Hr>
 </head>
 <body>
-    <center>
+    <center> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #f0f0f0;
+            }
+            h1 {
+                color: #333;
+            }
+            h2 {
+                color: #555;
+            }
+            form {
+                background-color: #fff;
+                padding: 20px;
+                border-radius: 10px;
+                box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            }
+            select, button {
+                padding: 10px;
+                margin: 5px;
+                border-radius: 5px;
+                border: 1px solid #ccc;
+            }
+            button {
+                background-color: #007bff;
+                color: white;
+                cursor: pointer;
+            }
+
+            button:hover {
+                background-color: #0056b3;
+            }
+            @media screen and (max-width: 600px) {
+                form,select,button,h1,h2 {
+                    width: 90%;
+                }
+            }
+
+            
+        </style>
         <h2>Enter the names of two people to find out their relationship status according to the FLAMES game:</h2>
         <form> <select name="name1" id="name1">
                 <option value="">Select first name</option>
